@@ -13,7 +13,7 @@ import { IconBaseProps } from 'react-icons/lib';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  icon: React.ComponentType<IconBaseProps>;
+  icon: React.ComponentType<IconBaseProps> | any;
 }
 
 export function Input({ name, icon: Icon, ...rest }: InputProps) {
