@@ -1,22 +1,13 @@
 import { useState, useEffect } from 'react';
 
-import {Header} from '../../components/Header';
+import { Header } from '../../components/Header';
 import api from '../../services/api';
-import {Food, FoodProps} from '../../components/Food';
-import {ModalAddFood} from '../../components/ModalAddFood';
-import {ModalEditFood} from '../../components/ModalEditFood';
+import { Food, FoodProps } from '../../components/Food';
+import { ModalAddFood } from '../../components/ModalAddFood';
+import { ModalEditFood } from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
 
 type FoodItem = Omit<FoodProps["food"], 'handleDelete' | 'handleEditFood'>
-
-// interface FoodItem {
-//   id: number;
-//   name: string;
-//   description: string;
-//   price: number;
-//   available: boolean;
-//   image: string;
-// }
 
 export function Dashboard() {
   const [foods, setFoods] = useState<FoodItem[]>([]);

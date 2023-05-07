@@ -31,14 +31,6 @@
       "description": "Macarrão Italiano com molho picante e queijo",
       "available": true,
       "id": 4
-    },
-    {
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-      "name": "Italian Pasta",
-      "price": "20.2",
-      "description": "Italian Pasta with a delicious sauce and good vegetable...",
-      "available": true,
-      "id": 5
     }
   ]
 }

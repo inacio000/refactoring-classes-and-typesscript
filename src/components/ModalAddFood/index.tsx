@@ -14,7 +14,7 @@ interface ModalAddFoodProps {
 }
 
 export function ModalAddFood({ isOpen, setIsOpen, handleAddFood }: ModalAddFoodProps) {
-  
+
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit = async (data: FormData) => {
@@ -24,7 +24,7 @@ export function ModalAddFood({ isOpen, setIsOpen, handleAddFood }: ModalAddFoodP
 
   return (
     <Modal isModalOpen={isOpen} setModalOpen={setIsOpen}>
-      <Form  ref={formRef} onSubmit={handleSubmit}>
+      <Form ref={formRef} onSubmit={handleSubmit}>
         <h1>Novo Prato</h1>
         <Input name="image" placeholder="Cole o link aqui" icon={undefined} />
 

@@ -13,7 +13,7 @@ interface ModalEditFoodProps {
   handleUpdateFood: (data: any) => void;
 }
 
-export function ModalEditFood({ isOpen,setIsOpen, editingFood, handleUpdateFood }: ModalEditFoodProps) {
+export function ModalEditFood({ isOpen, setIsOpen, editingFood, handleUpdateFood }: ModalEditFoodProps) {
   const formRef = useRef<FormHandles>(null);
 
   async function handleSubmit(data: any) {

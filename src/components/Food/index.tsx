@@ -3,10 +3,10 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 
 import { Container } from './styles';
 import api from '../../services/api';
-import { formatPrice } from '../../util/format';
+// import { formatPrice } from '../../util/format';
 
 export interface FoodProps {
-  food: { 
+  food: {
     id: number;
     name: string;
     description: string;
@@ -24,17 +24,17 @@ export interface ContainerProps {
 }
 
 export function Food({ food, handleDelete, handleEditFood }: FoodProps) {
-  
-  const [ isAvailable, setIsvailable ] = useState(food.available);
+
+  const [isAvailable, setIsvailable] = useState(food.available);
 
   async function toggleAvailable() {
-    
+
     await api.put(`/foods/${food.id}`, {
       ...food,
       available: !isAvailable,
     });
 
-    setIsvailable( !isAvailable );
+    setIsvailable(!isAvailable);
   }
 
   function setEditingFood() {
@@ -51,7 +51,14 @@ export function Food({ food, handleDelete, handleEditFood }: FoodProps) {
         <h2>{food.name}</h2>
         <p>{food.description}</p>
         <p className="price">
-          <b>{formatPrice(food.pice)}</b>
+          <b>
+            {
+              new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+              }).format(food.pice)
+            }
+          </b>
         </p>
       </section>
       <section className="footer">

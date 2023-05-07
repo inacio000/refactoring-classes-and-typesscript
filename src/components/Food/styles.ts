@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 interface AvalaibleProps {
   available: boolean;
@@ -16,7 +16,11 @@ export const Container = styled.div<AvalaibleProps>`
     transition: 0.3s opacity;
     text-align: center;
 
-    ${(props) => !props.available && css`opacity: 0.3;`};
+    ${(props) =>
+      !props.available &&
+      css`
+        opacity: 0.3;
+      `};
 
     img {
       pointer-events: none;
@@ -114,7 +118,7 @@ export const Container = styled.div<AvalaibleProps>`
 
           &:before {
             position: absolute;
-            content: '';
+            content: "";
             height: 20px;
             width: 40px;
             left: 8px;
